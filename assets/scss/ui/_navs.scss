@@ -29,5 +29,40 @@
            *display: inline;
             zoom: 1;
         }
+        padding: .1em;
+        margin: 0 1em;
     }
+}
+
+#menu-toggle {display: none;}  
+.label-toggle {display: none;}
+
+@media screen and (max-width: 768px) {
+    ul {
+	height: 0;
+	list-style-type: none;
+	opacity: 0;
+	transition: all .5s ease;
+	width: 100%;
+	visibility: hidden;
+    }
+    
+    li {
+
+	> a {
+	    display: block !important;
+	}
+	display: block !important;
+	font-size: 1.5em;
+	padding: 2em 0;
+    }
+    .label-toggle {
+	display: block;
+    }
+}
+
+#menu-toggle:checked ~ ul {
+      opacity: 1;
+      height: 20vh;
+      visibility: visible;
 }
