@@ -24,7 +24,7 @@
 
 // Defaults which you can freely override. The default 65px column width and 20px gutter width makes a 1000px width grid. These numbers are automatically converted into percentages via the SCSS operations below when $total-width (also below) is set to 100%.
 $column-width: 65;
-$gutter-width: 20;
+$gutter-width: 10;
 $columns: 12;
 
 
@@ -96,4 +96,54 @@ $correction: 0.5 / $min-width * 100;
 // Pull
 @mixin pull($offset:1) {
 	margin-right: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+}
+
+
+// Extra stuff like
+// Image layouts
+// Responsive image grids
+// Uses the gris system defined in this file
+
+.img-col-0 {
+    width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+}
+
+.img-col-1 {
+    width: 98vw;
+    margin-left: calc(-1 * ((98vw - 100%) / 2));
+    > img {
+	@media screen and (min-width: 768px) {
+	    @include column(12);
+	}
+    }
+}
+
+.img-col-2 {
+    width: 98vw;
+    margin-left: calc(-1 * ((98vw - 100%) / 2));
+    > img {
+	@media screen and (min-width: 768px) {
+	    @include column(6);
+	}
+    }
+}
+
+.img-col-3 {
+    width: 98vw;
+    margin-left: calc(-1 * ((98vw - 100%) / 2));
+    > img {
+	@media screen and (min-width: 768px) {
+	    @include column(4);
+	}
+    }
+}
+
+$img-margin: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+
+.post-content {
+    img {
+	margin-top: $img-margin;
+	margin-bottom: $img-margin;
+    }
 }
