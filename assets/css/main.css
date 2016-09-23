@@ -580,6 +580,50 @@ body {
   max-width: 800px;
   margin: auto; }
 
+.img-col-0 {
+  width: 100vw;
+  margin-left: calc(-1 * ((100vw - 100%) / 2)); }
+
+.img-col-1 {
+  width: 98vw;
+  margin-left: calc(-1 * ((98vw - 100%) / 2)); }
+  @media screen and (min-width: 768px) {
+    .img-col-1 > img {
+      display: inline;
+      float: left;
+      width: 98.88889%;
+      margin: 0 0.55556%;
+      *width: 98.88884%;
+      *margin: 0 0.55551%; } }
+
+.img-col-2 {
+  width: 98vw;
+  margin-left: calc(-1 * ((98vw - 100%) / 2)); }
+  @media screen and (min-width: 768px) {
+    .img-col-2 > img {
+      display: inline;
+      float: left;
+      width: 48.88889%;
+      margin: 0 0.55556%;
+      *width: 48.88884%;
+      *margin: 0 0.55551%; } }
+
+.img-col-3 {
+  width: 98vw;
+  margin-left: calc(-1 * ((98vw - 100%) / 2)); }
+  @media screen and (min-width: 768px) {
+    .img-col-3 > img {
+      display: inline;
+      float: left;
+      width: 32.22222%;
+      margin: 0 0.55556%;
+      *width: 32.22217%;
+      *margin: 0 0.55551%; } }
+
+.post-content img {
+  margin-top: 0.55556%;
+  margin-bottom: 0.55556%; }
+
 .nav {
   list-style: none;
   margin-left: 0;
@@ -591,11 +635,43 @@ body {
     display: table; }
   .nav:after {
     clear: both; }
-  .nav > li,
-  .nav > li > a {
-    display: inline-block;
-    *display: inline;
-    zoom: 1; }
+  .nav > li {
+    padding: .1em;
+    margin: 0 1em; }
+    .nav > li,
+    .nav > li > a {
+      display: inline-block;
+      *display: inline;
+      zoom: 1; }
+
+#menu-toggle {
+  display: none; }
+
+.label-toggle {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  ul {
+    height: 0;
+    list-style-type: none;
+    opacity: 0;
+    transition: all .5s ease;
+    width: 100%;
+    visibility: hidden; }
+
+  li {
+    display: block !important;
+    font-size: 1.5em;
+    padding: 2em 0; }
+    li > a {
+      display: block !important; }
+
+  .label-toggle {
+    display: block; } }
+#menu-toggle:checked ~ ul {
+  opacity: 1;
+  height: 20vh;
+  visibility: visible; }
 
 img, embed, object, video {
   display: block;
@@ -816,7 +892,7 @@ hr {
 #site-header {
   text-align: center;
   min-height: 15em;
-  padding-top: 3em;
+  padding-top: 7em;
   margin-bottom: 9em; }
   @media (max-width: 800px) {
     #site-header {
