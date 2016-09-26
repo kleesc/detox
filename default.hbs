@@ -22,7 +22,7 @@
         <link rel="stylesheet" type='text/css' href="{{asset "/css/main.css"}}"/>
 
         <!-- Import web fonts using the link tag instead of CSS @import: http://stackoverflow.com/questions/12316501/including-google-web-fonts-link-or-import -->
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700' rel='stylesheet' type='text/css'>
 
         <!-- Font Awesome -->
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -81,7 +81,7 @@
         <footer id="site-footer">
             <div class="container">
                 <a href="{{@blog.url}}/rss/" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
-                <section>&copy; <a href="/">{{@blog.title}}</a> 2013 | All rights reserved</section>
+                <section>&copy; <a href="/">{{@blog.title}}</a> {{date format="YYYY"}} | All rights reserved</section>
                 <!-- <section>Theme by <a href="http://www.jrdnbwmn.com">Jordan Bowman</a>. Published with <a class="icon-ghost" href="http://ghost.org">Ghost</a>.</section> -->
             </div>
         </footer>
