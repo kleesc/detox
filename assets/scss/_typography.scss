@@ -45,6 +45,7 @@ $font-family-base:              $font-family-sans-serif;
 $font-size-base:                100% !default; // percentage value (16 * 112.5% = 18px)
 $font-size-large:               ($font-size-base * 1.25);
 $font-size-small:               ($font-size-base * 0.75);
+$font-size-code:                ($font-size-base * 0.95);
 
 
 // Line Height

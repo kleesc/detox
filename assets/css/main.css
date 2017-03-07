@@ -862,8 +862,11 @@ input:focus, textarea:focus {
 
 code {
   max-width: 100%;
-  border: 5px solid #cccccc;
-  margin: 1.5em 0; }
+  border: 1px solid #cccccc;
+  margin: 1.5em 0;
+  color: #a71d5d;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 95%; }
 
 hr {
   display: block;
