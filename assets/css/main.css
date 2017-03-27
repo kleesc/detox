@@ -585,10 +585,10 @@ body {
   max-width: 800px;
   margin: auto; }
 .content-container article section p {
-  margin-bottom: 1.5em;
   width: 90%;
   max-width: 800px;
-  margin: auto; }
+  margin: auto;
+  margin-bottom: 1.5em; }
 .content-container article hr {
   width: 90%;
   max-width: 800px;

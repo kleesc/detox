@@ -53,8 +53,8 @@ $total-width: 100%;
 	
 	section {
 	    p {
-		margin-bottom: $p-margin-bottom;
 		@include content-container;
+		margin-bottom: $p-margin-bottom;
 	    }
 	}
 	
