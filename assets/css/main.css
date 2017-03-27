@@ -580,15 +580,44 @@ body {
   max-width: 800px;
   margin: auto; }
 
-.img-col-0 {
-  width: 100vw;
-  margin-left: calc(-1 * ((100vw - 100%) / 2)); }
+.content-container article header {
+  width: 90%;
+  max-width: 800px;
+  margin: auto; }
+.content-container article section p {
+  margin-bottom: 1.5em;
+  width: 90%;
+  max-width: 800px;
+  margin: auto; }
+.content-container article hr {
+  width: 90%;
+  max-width: 800px;
+  margin: auto; }
+.content-container article footer {
+  width: 90%;
+  max-width: 800px;
+  margin: auto; }
+.content-container article nav {
+  width: 90%;
+  max-width: 800px;
+  margin: auto; }
 
-.img-col-1 {
-  width: 98vw;
-  margin-left: calc(-1 * ((98vw - 100%) / 2)); }
+.img-col-0, .img-col-0-text {
+  width: 100%; }
+
+.img-col-0-text {
+  margin-bottom: 1.5em; }
+
+.img-col-1, .img-col-1-text {
+  *zoom: 1;
+  width: 100%; }
+  .img-col-1:before, .img-col-1-text:before, .img-col-1:after, .img-col-1-text:after {
+    content: "";
+    display: table; }
+  .img-col-1:after, .img-col-1-text:after {
+    clear: both; }
   @media screen and (min-width: 768px) {
-    .img-col-1 > img {
+    .img-col-1 > img, .img-col-1-text > img {
       display: inline;
       float: left;
       width: 98.88889%;
@@ -596,11 +625,20 @@ body {
       *width: 98.88884%;
       *margin: 0 0.55551%; } }
 
-.img-col-2 {
+.img-col-1-text {
+  margin-bottom: 1.5em; }
+
+.img-col-2, .img-col-2-text {
+  *zoom: 1;
   width: 98vw;
   margin-left: calc(-1 * ((98vw - 100%) / 2)); }
+  .img-col-2:before, .img-col-2-text:before, .img-col-2:after, .img-col-2-text:after {
+    content: "";
+    display: table; }
+  .img-col-2:after, .img-col-2-text:after {
+    clear: both; }
   @media screen and (min-width: 768px) {
-    .img-col-2 > img {
+    .img-col-2 > img, .img-col-2-text > img {
       display: inline;
       float: left;
       width: 48.88889%;
@@ -608,17 +646,29 @@ body {
       *width: 48.88884%;
       *margin: 0 0.55551%; } }
 
-.img-col-3 {
+.img-col-2-text {
+  margin-bottom: 1.5em; }
+
+.img-col-3, .img-col-3-text {
+  *zoom: 1;
   width: 98vw;
   margin-left: calc(-1 * ((98vw - 100%) / 2)); }
+  .img-col-3:before, .img-col-3-text:before, .img-col-3:after, .img-col-3-text:after {
+    content: "";
+    display: table; }
+  .img-col-3:after, .img-col-3-text:after {
+    clear: both; }
   @media screen and (min-width: 768px) {
-    .img-col-3 > img {
+    .img-col-3 > img, .img-col-3-text > img {
       display: inline;
       float: left;
       width: 32.22222%;
       margin: 0 0.55556%;
       *width: 32.22217%;
       *margin: 0 0.55551%; } }
+
+.img-col-3-text {
+  margin-bottom: 1.5em; }
 
 .post-content img {
   margin-top: 0.55556%;

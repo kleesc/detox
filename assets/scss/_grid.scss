@@ -35,8 +35,41 @@ $total-width: 100%;
 // Container
 .container {
     width: 90%;
-	max-width: 800px;
-	margin: auto;
+    max-width: 800px;
+    margin: auto;
+}
+
+@mixin content-container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.content-container {
+    article {
+	header {
+	    @include content-container;
+	}
+	
+	section {
+	    p {
+		margin-bottom: $p-margin-bottom;
+		@include content-container;
+	    }
+	}
+	
+	hr {
+	    @include content-container;
+	}
+	
+	footer {
+	    @include content-container;
+	}
+
+	nav {
+	    @include content-container;
+	}
+    }
 }
 
 
@@ -104,14 +137,24 @@ $correction: 0.5 / $min-width * 100;
 // Responsive image grids
 // Uses the gris system defined in this file
 
+$img-grid-margin: $p-margin-bottom;
+
 .img-col-0 {
-    width: 100vw;
-    margin-left: calc(-1 * ((100vw - 100%) / 2));
+    width: 100%;
+    // width: 100vw;
+    // margin-left: calc(-1 * ((100vw - 100%) / 2));
+}
+
+.img-col-0-text { // Add margin for text following grid
+    @extend .img-col-0;
+    margin-bottom: $img-grid-margin;
 }
 
 .img-col-1 {
-    width: 98vw;
-    margin-left: calc(-1 * ((98vw - 100%) / 2));
+    @include clearfix;
+    width: 100%;
+    // width: 98vw;
+    // margin-left: calc(-1 * ((98vw - 100%) / 2));
     > img {
 	@media screen and (min-width: 768px) {
 	    @include column(12);
@@ -119,7 +162,13 @@ $correction: 0.5 / $min-width * 100;
     }
 }
 
+.img-col-1-text { // Add margin for text following grid
+    @extend .img-col-1;
+    margin-bottom: $img-grid-margin;
+}
+
 .img-col-2 {
+    @include clearfix;
     width: 98vw;
     margin-left: calc(-1 * ((98vw - 100%) / 2));
     > img {
@@ -129,7 +178,13 @@ $correction: 0.5 / $min-width * 100;
     }
 }
 
+.img-col-2-text { // Add margin for text following grid
+    @extend .img-col-2;
+    margin-bottom: $img-grid-margin;
+}
+
 .img-col-3 {
+    @include clearfix;
     width: 98vw;
     margin-left: calc(-1 * ((98vw - 100%) / 2));
     > img {
@@ -137,6 +192,11 @@ $correction: 0.5 / $min-width * 100;
 	    @include column(4);
 	}
     }
+}
+
+.img-col-3-text { // Add margin for text following grid
+    @extend .img-col-3;
+    margin-bottom: $img-grid-margin;
 }
 
 $img-margin: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
