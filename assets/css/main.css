@@ -580,27 +580,25 @@ body {
   max-width: 800px;
   margin: auto; }
 
-.content-container article header {
+.content-container > article > *:not(section):not(hr) {
   width: 90%;
   max-width: 800px;
   margin: auto; }
-.content-container article section p {
+.content-container > article > section > p, .content-container > article > section > pre, .content-container > article > section > blockquote, .content-container > article > section > ul, .content-container > article > section > ol {
   width: 90%;
   max-width: 800px;
   margin: auto;
   margin-bottom: 1.5em; }
-.content-container article hr {
+.content-container > article > section > h2, .content-container > article > section > h3, .content-container > article > section > h4, .content-container > article > section > h5, .content-container > article > section > h6 {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5em; }
+.content-container > article hr {
   width: 90%;
   max-width: 800px;
-  margin: auto; }
-.content-container article footer {
-  width: 90%;
-  max-width: 800px;
-  margin: auto; }
-.content-container article nav {
-  width: 90%;
-  max-width: 800px;
-  margin: auto; }
+  margin-left: auto;
+  margin-right: auto; }
 
 .img-col-0, .img-col-0-text {
   width: 100%; }
@@ -610,7 +608,8 @@ body {
 
 .img-col-1, .img-col-1-text {
   *zoom: 1;
-  width: 100%; }
+  width: 98vw;
+  margin-left: calc(-1 * ((98vw - 100%) / 2)); }
   .img-col-1:before, .img-col-1-text:before, .img-col-1:after, .img-col-1-text:after {
     content: "";
     display: table; }

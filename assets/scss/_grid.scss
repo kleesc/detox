@@ -46,29 +46,31 @@ $total-width: 100%;
 }
 
 .content-container {
-    article {
-	header {
-	    @include content-container;
-	}
-	
-	section {
-	    p {
-		@include content-container;
-		margin-bottom: $p-margin-bottom;
-	    }
-	}
-	
-	hr {
-	    @include content-container;
-	}
-	
-	footer {
-	    @include content-container;
-	}
+    > article {
+        > *:not(section):not(hr) {
+            @include content-container;
+        }
+        
+        > section {
+            > p , > pre, > blockquote, > ul, > ol {
+                @include content-container;
+                margin-bottom: $p-margin-bottom;
+            }
 
-	nav {
-	    @include content-container;
-	}
+            > h2, > h3, > h4, > h5, > h6 {
+                display: table;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: $p-margin-bottom;
+            }
+        }
+        
+        hr {
+	    width: 90%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
@@ -152,9 +154,8 @@ $img-grid-margin: $p-margin-bottom;
 
 .img-col-1 {
     @include clearfix;
-    width: 100%;
-    // width: 98vw;
-    // margin-left: calc(-1 * ((98vw - 100%) / 2));
+    width: 98vw;
+    margin-left: calc(-1 * ((98vw - 100%) / 2));
     > img {
 	@media screen and (min-width: 768px) {
 	    @include column(12);
