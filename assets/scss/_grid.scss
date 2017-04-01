@@ -147,7 +147,14 @@ $img-grid-margin: $p-margin-bottom;
     // margin-left: calc(-1 * ((100vw - 100%) / 2));
 }
 
-.img-col-0-text { // Add margin for text following grid
+.img-col-0-top { // Remove top margin for first grid
+    @extend .img-col-0;
+    img {
+        margin-top: 0 !important;
+    }
+}
+
+.img-col-0-bottom { // Add margin for <p> following last grid
     @extend .img-col-0;
     margin-bottom: $img-grid-margin;
 }
@@ -163,7 +170,14 @@ $img-grid-margin: $p-margin-bottom;
     }
 }
 
-.img-col-1-text { // Add margin for text following grid
+.img-col-1-top { // Remove top margin for first grid
+    @extend .img-col-1;
+    img {
+        margin-top: 0 !important;
+    }
+}
+
+.img-col-1-bottom { // Add margin for <p> following last grid
     @extend .img-col-1;
     margin-bottom: $img-grid-margin;
 }
@@ -179,7 +193,14 @@ $img-grid-margin: $p-margin-bottom;
     }
 }
 
-.img-col-2-text { // Add margin for text following grid
+.img-col-2-top { // Remove top margin for first grid
+    @extend .img-col-2;
+    > img {
+        margin-top: 0 !important;
+    }
+}
+
+.img-col-2-bottom { // Add margin for <p> following last grid
     @extend .img-col-2;
     margin-bottom: $img-grid-margin;
 }
@@ -195,7 +216,14 @@ $img-grid-margin: $p-margin-bottom;
     }
 }
 
-.img-col-3-text { // Add margin for text following grid
+.img-col-3-top { // Remove top margin for first grid
+    @extend .img-col-3;
+    img {
+        margin-top: 0 !important;
+    }
+}
+
+.img-col-3-bottom { // Add margin for <p> following last grid
     @extend .img-col-3;
     margin-bottom: $img-grid-margin;
 }

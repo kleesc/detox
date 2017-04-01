@@ -74,9 +74,10 @@ abbr, acronym, blockquote, code, dir, kbd, listing, plaintext, q, samp, tt, var,
 // Variables
 $headings-font-family:          'Montserrat';
 $headings-font-weight:          700;
+$blog-title-font-weight:        600;
 
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
     line-height: 1; // this fixes huge spaces when a heading wraps onto two lines
@@ -86,6 +87,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1  {
+    font-family: $headings-font-family;
+    font-weight: $blog-title-font-weight;
     font-size: 60px;
 	font-size: 3.33333rem; // 60 / 18 = 3.3333
 	margin-bottom: 0.495em;
