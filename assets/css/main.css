@@ -602,7 +602,7 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
-.img-col-0, .img-col-0-top, .img-col-0-bottom {
+.img-col-0 > img, .img-col-0-top > img, .img-col-0-bottom > img {
   width: 100%; }
 
 .img-col-0-top img {

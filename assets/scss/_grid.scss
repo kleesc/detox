@@ -142,7 +142,9 @@ $correction: 0.5 / $min-width * 100;
 $img-grid-margin: $p-margin-bottom;
 
 .img-col-0 {
-    width: 100%;
+    > img {
+        width: 100%;
+    }
     // width: 100vw;
     // margin-left: calc(-1 * ((100vw - 100%) / 2));
 }
